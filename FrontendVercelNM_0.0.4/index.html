@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neomarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body class="bg-dark text-white">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+                    <img src="img/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2 logo-animado">
+                    <span class="text-primary">NEO</span>MARKET
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+                        <li class="nav-item px-2">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">Estadísticas</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-outline-primary rounded-pill px-4" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="text-center py-5">
+            <h1 class="display-4 fw-bold text-primary">NEOMARKET</h1>
+            <p class="lead">El portal definitivo para el seguimiento de estadísticas de Rocket League España.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="#tabla" class="btn btn-primary btn-lg px-4 gap-3">Ver Resultados</a>
+                <button type="button" class="btn btn-outline-light btn-lg px-4">Sobre Nosotros</button>
+            </div>
+        </section>
+
+        <div class="bloque-custom">
+            <div class="row">
+                <section class="col-12 col-md-8">
+                    <h2 class="mb-4">últimos resultados</h2>
+
+                    <div id="alertaBienvenida" class="alert alert-success d-flex align-items-center d-none fade" role="alert">
+                        <strong>¡Nueva Jornada!</strong> &nbsp; Estadísticas actualizadas.
+                    </div>
+
+                    <div class="table-responsive mt-4">
+                        <!-- Tabla de resultados estática existente -->
+                        <table class="table table-dark table-hover table-borderless align-middle shadow" id="tabla">
+                            <thead class="text-secondary border-bottom border-primary border-2">
+                                <tr>
+                                    <th scope="col" class="py-3 px-4">FECHA</th>
+                                    <th scope="col" class="py-3 px-4">ENFRENTAMIENTO</th>
+                                    <th scope="col" class="py-3 px-4 text-center">RESULTADO</th>
+                                </tr>
+                            </thead>
+                            <tbody class="fw-medium" id="tabla-body">
+                                <!-- Filas estáticas de ejemplo (puedes eliminarlas) -->
+                                <tr class="border-bottom border-white border-opacity-10">
+                                    <td class="py-3 px-4 text-secondary small">03/02/2026</td>
+                                    <td class="py-3 px-4">
+                                        <span class="text-white">Equipo A</span> 
+                                        <small class="text-primary mx-1 fw-bold">VS</small> 
+                                        <span class="text-white">Equipo B</span>
+                                    </td>
+                                    <td class="py-3 px-4 text-center">
+                                        <span class="badge bg-primary px-3 py-2 shadow-sm" style="min-width: 50px;">3 - 2</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-bottom border-white border-opacity-10">
+                                    <td class="py-3 px-4 text-secondary small">04/02/2026</td>
+                                    <td class="py-3 px-4">
+                                        <span class="text-white">Equipo C</span> 
+                                        <small class="text-primary mx-1 fw-bold">VS</small> 
+                                        <span class="text-white">Equipo D</span>
+                                    </td>
+                                    <td class="py-3 px-4 text-center">
+                                        <span class="badge bg-primary px-3 py-2 shadow-sm" style="min-width: 50px;">3 - 1</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-bottom border-white border-opacity-10">
+                                    <td class="py-3 px-4 text-secondary small">04/02/2026</td>
+                                    <td class="py-3 px-4">
+                                        <span class="text-white">Equipo E</span> 
+                                        <small class="text-primary mx-1 fw-bold">VS</small> 
+                                        <span class="text-white">Equipo F</span>
+                                    </td>
+                                    <td class="py-3 px-4 text-center">
+                                        <span class="badge bg-primary px-3 py-2 shadow-sm" style="min-width: 50px;">3 - 0</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-bottom border-white border-opacity-10">
+                                    <td class="py-3 px-4 text-secondary small">05/02/2026</td>
+                                    <td class="py-3 px-4">
+                                        <span class="text-white">Equipo G</span> 
+                                        <small class="text-primary mx-1 fw-bold">VS</small> 
+                                        <span class="text-white">Equipo H</span>
+                                    </td>
+                                    <td class="py-3 px-4 text-center">
+                                        <span class="badge bg-primary px-3 py-2 shadow-sm" style="min-width: 50px;">3 - 2</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Botón para cargar jugadores desde el backend -->
+                    <div class="mt-4">
+                        <button id="btnCargarJugadores" class="btn btn-success">Mostrar jugadores (desde BD)</button>
+                    </div>
+
+                    <!-- Tabla simple para mostrar los jugadores desde la BD -->
+                    <div class="table-responsive mt-3 d-none" id="jugadoresContainer">
+                        <table class="table table-dark table-striped" id="tablaJugadores">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Rango</th>
+                                    <th>Equipo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaJugadoresBody">
+                                <!-- Rellenado por JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Botón y tabla para cargar equipos desde el backend -->
+                    <div class="mt-4">
+                        <button id="btnCargarEquipos" class="btn btn-primary">Mostrar equipos (desde BD)</button>
+                    </div>
+
+                    <div class="table-responsive mt-3 d-none" id="equiposContainer">
+                        <table class="table table-dark table-striped" id="tablaEquipos">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Localidad</th>
+                                    <th>Jugadores</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaEquiposBody">
+                                <!-- Rellenado por JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 class="mb-3 mt-5">Próximo partido</h2>
+                    <div class="p-3 rounded-3 border border-secondary bg-dark shadow-lg">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <div class="p-2 bg-primary bg-opacity-10 rounded-2 border border-primary border-opacity-25 text-center">
+                                    <h5 class="text-white fw-bold mb-0 small">MADRID GAMING</h5>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span class="badge rounded-pill bg-danger mb-1" style="font-size: 0.7rem;">
+                                        <span class="spinner-grow spinner-grow-sm" style="width: 8px; height: 8px;"></span> EN DIRECTO
+                                    </span>
+                                    <h3 class="fw-black text-primary mb-0" style="font-style: italic; font-family: 'Arial Black'; line-height: 1;">VS</h3>
+                                    <small class="text-secondary fw-bold" style="font-size: 0.75rem;">20:00H</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 bg-warning bg-opacity-10 rounded-2 border border-warning border-opacity-25 text-center">
+                                    <h5 class="text-white fw-bold mb-0 small">BARCELONA ESPORTS</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2 border-top border-secondary border-opacity-50 d-flex justify-content-between align-items-center">
+                            <small class="text-light">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Twitch_Glitch_Logo_Purple.svg" alt="Twitch" width="14" class="me-1">
+                                <span class="d-none d-sm-inline text-secondary">Síguelo en:</span> <strong>RocketLeagueES</strong>
+                            </small>
+                            <a href="https://www.twitch.tv/" class="btn btn-primary btn-sm fw-bold px-3 rounded-pill" target="_blank" rel="noopener noreferrer">VER AHORA</a>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="col-12 col-md-3 ms-auto mt-5 mt-md-0">
+                    <h3 class="mb-4">Noticias</h3>
+                    <div class="card bg-dark border-secondary mb-3 shadow-sm">
+                        <div class="card-body">
+                            <small class="text-secondary d-block mb-1">Hace 2 horas</small>
+                            <h5 class="card-title text-primary">Fichajes Temporada</h5>
+                            <p class="card-text small text-secondary">Nuevos cambios en los rosters principales de la liga nacional.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="card bg-dark border-secondary mb-3 shadow-sm">
+                        <div class="card-body">
+                            <small class="text-secondary d-block mb-1">Hace 5 horas</small>
+                            <h5 class="card-title text-primary">MVP de la Semana</h5>
+                            <p class="card-text small text-secondary">Descubre quién ha sido el jugador más destacado de la última jornada.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="card bg-dark border-secondary mb-3 shadow-sm">
+                        <div class="card-body">
+                            <small class="text-secondary d-block mb-1">Ayer</small>
+                            <h5 class="card-title text-primary">Torneo Comunidad</h5>
+                            <p class="card-text small text-secondary">Inscríbete en el próximo Open de Neomarket. ¡Premios en créditos!</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Inscribirse</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div class="row mt-4 g-4">
+            <div class="col-12 col-md-7">
+                <div class="bloque-custom h-100 p-4">
+                    <h3 class="text-primary mb-3">Información del Proyecto</h3>
+                    <p class="text-secondary">Neomarket es una plataforma de registro de estadísticas de Rocket League España. Si quieres más ventajas, puedes apoyarnos adquiriendo una cuenta premium:</p>
+
+                    <div id="carouselPremium" class="carousel slide bg-dark rounded-3 border border-secondary mt-3" data-bs-ride="carousel">
+                        <div class="carousel-inner p-4">
+                            <div class="carousel-item active">
+                                <div class="text-center">
+                                    <h5 class="text-info fw-bold">💎 CUENTA JUGADOR</h5>
+                                    <ul class="list-unstyled my-3 text-secondary small">
+                                        <li>• Alertas de partidos en tiempo real</li>
+                                        <li>• Emojis exclusivos en la web</li>
+                                        <li>• Acceso a sorteos mensuales</li>
+                                    </ul>
+                                    <span class="badge bg-info text-dark">4.99€ / mes</span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="text-center">
+                                    <h5 class="text-warning fw-bold">📊 CUENTA SCOUTER</h5>
+                                    <ul class="list-unstyled my-3 text-secondary small">
+                                        <li>• Estadísticas avanzadas de jugadores</li>
+                                        <li>• Análisis de repeticiones (Replays)</li>
+                                        <li>• Exportación de datos a JSON</li>
+                                    </ul>
+                                    <span class="badge bg-warning text-dark">12.99€ / mes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPremium" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPremium" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+                <div class="bloque-custom h-100 p-4">
+                    <h3 class="mb-4 text-primary">Regístrate</h3>
+                    <form class="needs-validation">
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label text-white">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-primary border-primary text-white">@</span>
+                                <input id="emailInput" type="email" class="form-control bg-dark text-white border-secondary" placeholder="nombre@u-tad.com" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="rangoDataList" class="form-label text-white">Tu Rango Actual</label>
+                            <input class="form-control bg-dark text-white border-secondary" list="datalistOptions" id="rangoDataList" placeholder="Escribe para buscar tu rango...">
+                            <datalist id="datalistOptions">
+                                <option value="Bronce"></option>
+                                <option value="Plata"></option>
+                                <option value="Oro"></option>
+                                <option value="Platino"></option>
+                                <option value="Diamante"></option>
+                                <option value="Campeón"></option>
+                                <option value="Gran Campeón"></option>
+                                <option value="Leyenda Supersónica"></option>
+                            </datalist>
+                            <div class="form-text text-secondary">Selecciona tu rango oficial de esta temporada.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 fw-bold py-2">REGISTRARSE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5 border-top border-secondary border-opacity-25">
+        <div class="container text-center">
+            <p class="mb-1">© 2026 Neomarket - Estadísticas Rocket League España</p>
+            <small class="text-secondary">by NeoCelenis Gaming</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="config.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const alerta = document.querySelector('#alertaBienvenida');
+            if (alerta) {
+                setTimeout(() => {
+                    alerta.classList.remove('d-none');
+                    setTimeout(() => {
+                        alerta.classList.add('show');
+                    }, 10);
+                    setTimeout(() => {
+                        const bsAlert = new bootstrap.Alert(alerta);
+                        bsAlert.close();
+                    }, 4000);
+                }, 1500);
+            }
+
+            // Nueva funcionalidad: cargar jugadores desde el backend
+            const btn = document.getElementById('btnCargarJugadores');
+            const cont = document.getElementById('jugadoresContainer');
+            const tbody = document.getElementById('tablaJugadoresBody');
+
+            btn.addEventListener('click', async () => {
+                try {
+                    const resp = await fetch(API_BASE + '/api/jugadores');
+                    if (!resp.ok) throw new Error('Error al obtener jugadores: ' + resp.status);
+                    const jugadores = await resp.json();
+
+                    // Limpiamos tabla
+                    tbody.innerHTML = '';
+
+                    if (jugadores.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="3" class="text-center text-secondary">No hay jugadores en la base de datos</td></tr>';
+                    } else {
+                        jugadores.forEach(j => {
+                            const tr = document.createElement('tr');
+                            const equipoNombre = j.equipoNombre ? escapeHtml(j.equipoNombre) : '<span class="text-secondary">(Sin equipo)</span>';
+                            tr.innerHTML = `<td>${escapeHtml(j.nombre)}</td><td>${escapeHtml(j.rango || '')}</td><td>${equipoNombre}</td>`;
+                            tbody.appendChild(tr);
+                        });
+                    }
+
+                    cont.classList.remove('d-none');
+                    // Scroll suave hasta la tabla
+                    document.getElementById('tablaJugadores').scrollIntoView({ behavior: 'smooth' });
+
+                } catch (e) {
+                    alert('No se han podido cargar los jugadores. ¿Está el backend arrancado?\n' + e.message);
+                }
+            });
+
+            // Nueva funcionalidad: cargar equipos desde el backend
+            const btnEquipos = document.getElementById('btnCargarEquipos');
+            const contEquipos = document.getElementById('equiposContainer');
+            const tbodyEquipos = document.getElementById('tablaEquiposBody');
+
+            btnEquipos.addEventListener('click', async () => {
+                try {
+                    const resp = await fetch(API_BASE + '/api/equipos');
+                    if (!resp.ok) throw new Error('Error al obtener equipos: ' + resp.status);
+                    const equipos = await resp.json();
+
+                    tbodyEquipos.innerHTML = '';
+
+                    if (!Array.isArray(equipos) || equipos.length === 0) {
+                        tbodyEquipos.innerHTML = '<tr><td colspan="4" class="text-center text-secondary">No hay equipos en la base de datos</td></tr>';
+                    } else {
+                        equipos.forEach(e => {
+                            const numJug = Array.isArray(e.jugadores) ? e.jugadores.length : 0;
+                            const tr = document.createElement('tr');
+                            tr.innerHTML = `<td>${escapeHtml(String(e.id || ''))}</td><td>${escapeHtml(e.nombre || '')}</td><td>${escapeHtml(e.localidad || '')}</td><td>${numJug}</td>`;
+                            tbodyEquipos.appendChild(tr);
+                        });
+                    }
+
+                    contEquipos.classList.remove('d-none');
+                    document.getElementById('tablaEquipos').scrollIntoView({ behavior: 'smooth' });
+
+                } catch (err) {
+                    console.error(err);
+                    alert('No se han podido cargar los equipos. ¿Está el backend arrancado?\n' + err.message);
+                }
+            });
+
+            // Pequeña función para evitar inyecciones en el HTML
+            function escapeHtml(unsafe) {
+                if (unsafe === null || unsafe === undefined) return '';
+                return String(unsafe)
+                    .replaceAll('&', '&amp;')
+                    .replaceAll('<', '&lt;')
+                    .replaceAll('>', '&gt;')
+                    .replaceAll('"', '&quot;')
+                    .replaceAll("'", '&#039;');
+            }
+        });
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,73 @@
+/* Estilos personalizados para Neomarket */
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Capa para desenfocar y oscurecer el fondo */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                url('img/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+main {
+    background: none !important; 
+    padding: 0;
+}
+
+/* Creo la clase para los bloques independientes */
+.bloque-custom {
+    background: rgba(0, 0, 0, 0.5); /* El efecto opaco */
+    backdrop-filter: blur(10px);    /* Difumina el fondo detrás del bloque */
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;            /* Separacion entre bloques */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Añado un pequeno*/
+}
+
+/* 3. Footer: no se encoge */
+footer {
+    flex-shrink: 0;
+}
+
+/* Estilos personalizados para Neomarket */
+
+/* 1. Base para empujar el footer al fondo si hay poco contenido */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Capa para desenfocar y oscurecer el fondo */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                url('img/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+main {
+    background: none !important; 
+    padding: 0;
+}
+
+/* Creo la calse para los bloques independientes */
+.bloque-custom {
+    background: rgba(0, 0, 0, 0.5); /* El efecto opaco */
+    backdrop-filter: blur(10px);    /* Difumina el fondo detrás del bloque */
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;            /* Separación entre bloques */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Añado un pequeno*/
+}
+
+
+/* Para que los bloques de noticias se vean un poco mas claritos */
+.card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
